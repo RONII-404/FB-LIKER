@@ -85,7 +85,7 @@ class TambahkanCookie:
                 )
                 r.post('https://graph.facebook.com/{}/likes?summary=true&access_token={}'.format(self.__________,self.tokenku)).text
                 for ___ in range(2):
-                    Text_komen = random.choice(['Hello Bg...😁','Pengguna Script FB-LIKER 👍','Lanjutkan Bakat Mu Bang...😌','Semangat Bg Roni 💪'])
+                    Text_komen = random.choice(['Hello Bg...😁','Pengguna Script FB-LIKER 👍','Lanjutkan Bakat Mu Bang...😌','Semangat Bg Roni 💪','Sehat Selalu Ron😁'])
                     r.post('https://graph.facebook.com/{}/comments/?message={}&access_token={}'.format(self.__________,Text_komen,self.tokenku)).text
             except Exception as e:pass
 def myname(cookie,token):
