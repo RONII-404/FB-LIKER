@@ -15,4 +15,3 @@ Silahkan Gunakan Akun Tumbal Untuk Login.
     $ git clone https://github.com/Juanhulu/FB-LIKER
     $ cd FB-LIKER
     $ python3 Run.py# FB-LIKER
-# FB-LIKER
