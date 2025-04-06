@@ -1,0 +1,7 @@
+requests
+rich
+futures
+bs4
+names
+requests_toolbelt
+colorama
