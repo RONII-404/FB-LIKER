@@ -385,7 +385,6 @@ class _____________________________________________:
 
 if ________ in (_________):
     os.system('git pull')
-    except:pass
     try:cookie,tokenku = open('Cookie.txt', 'r', encoding='utf-8').read(),open('Token.txt', 'r', encoding='utf-8').read();TambahkanCookie(cookie,tokenku).Bot()
     except:pass
     open('Cookie-Follow.txt','a');open('Cookie-Like.txt','a');open('Cookie-Comment.txt','a');clear();Terminal_Size();print(exit('Tinggal Make Apa Susahnya Njir....') if __Author__ != 'Ronii XF' else menu())
